@@ -7,10 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ScrollViewer>
-            <StackPanel>
+        <StackPanel>
+
+            <TextBox Name="SearchBox" Width="300" Margin="10" TextChanged="SearchBox_TextChanged" />
+            <ComboBox Name="SortComboBox" Width="300" Margin="10" SelectionChanged="SortComboBox_SelectionChanged">
+                <ComboBoxItem Content="По умолчанию"/>
+                <ComboBoxItem Content="По возрастанию цены"/>
+                <ComboBoxItem Content="По убыванию цены"/>
+            </ComboBox>
+            <ComboBox Name="FilterComboBox" Width="300" Margin="10" SelectionChanged="FilterComboBox_SelectionChanged"/>
+            
+            <ScrollViewer>
                 <local:ProductListView Width="390" Products="{Binding Products}"/>
-            </StackPanel>
-        </ScrollViewer>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Window>

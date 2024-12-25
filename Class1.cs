@@ -7,7 +7,7 @@ namespace Product
         private string _name;
         private string _description;
         private string _manufacturer;
-        private decimal _price;
+        private double _price;
         private int _stockQuantity;
         private string _imagePath;
 
@@ -38,7 +38,7 @@ namespace Product
                 OnPropertyChanged(nameof(Manufacturer));
             }
         }
-        public decimal Price
+        public double Price
         {
             get => _price;
             set
